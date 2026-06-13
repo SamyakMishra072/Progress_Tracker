@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useAppStore } from '@/store/useAppStore';
 import { formatTime, formatDate } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import { UserButton } from "@clerk/clerk-react";
 import {
   Menu,
   Moon,
@@ -75,9 +76,14 @@ export function Header() {
           </Button>
 
           {/* Profile Avatar */}
-          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-saffron to-india-green flex items-center justify-center text-white text-sm font-bold cursor-pointer hover:shadow-lg transition-shadow">
-            MC
-          </div>
+<UserButton
+  appearance={{
+    elements: {
+      avatarBox: "w-9 h-9"
+    }
+  }}
+  afterSignOutUrl="/"
+/>
         </div>
       </div>
     </header>
