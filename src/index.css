@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@theme {
+  /* Indian Tricolour Colors */
+  --color-saffron: #FF9933;
+  --color-saffron-light: #FFB366;
+  --color-saffron-dark: #E68A00;
+
+  --color-india-green: #138808;
+  --color-india-green-light: #1EA80E;
+  --color-india-green-dark: #0D6600;
+
+  --color-navy: #000080;
+  --color-navy-light: #1A1A9E;
+  --color-navy-dark: #000066;
+
+  /* Extended Color System */
+  --color-primary: #0066CC;
+  --color-primary-light: #3399FF;
+  --color-primary-dark: #004C99;
+
+  --color-accent: #FF6B35;
+  --color-accent-light: #FF8C5A;
+  --color-accent-dark: #E55A2B;
+
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+
+  /* Neutral Tones */
+  --color-surface: #FFFFFF;
+  --color-surface-secondary: #F8FAFC;
+  --color-border: #E2E8F0;
+  --color-text: #1E293B;
+  --color-text-secondary: #64748B;
+
+  /* Glassmorphism */
+  --glass-background: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.18);
+
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+
+  /* Spacing */
+  --spacing-18: 4.5rem;
+  --spacing-22: 5.5rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-glass: 0 8px 32px 0 rgb(31 38 135 / 0.15);
+}
+
+/* Base Styles */
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark Mode Theme */
+.dark {
+  --color-surface: #0F172A;
+  --color-surface-secondary: #1E293B;
+  --color-border: #334155;
+  --color-text: #F1F5F9;
+  --color-text-secondary: #94A3B8;
+  --glass-background: rgba(15, 23, 42, 0.7);
+  --glass-border: rgba(30, 41, 59, 0.5);
+}
+
+/* Glassmorphism Component */
+.glass {
+  background: var(--glass-background);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-glass);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(30, 41, 59, 0.5);
+  box-shadow: var(--shadow-glass);
+}
+
+/* Smooth Transitions */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Gradient Backgrounds */
+.gradient-saffron {
+  background: linear-gradient(135deg, var(--color-saffron), var(--color-saffron-light));
+}
+
+.gradient-green {
+  background: linear-gradient(135deg, var(--color-india-green), var(--color-india-green-light));
+}
+
+.gradient-navy {
+  background: linear-gradient(135deg, var(--color-navy), var(--color-navy-light));
+}
+
+.gradient-tricolour {
+  background: linear-gradient(180deg, var(--color-saffron) 0%, #FFFFFF 50%, var(--color-india-green) 100%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-secondary);
+}
+
+/* Animation utilities */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-in {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 153, 51, 0.4); }
+  50% { box-shadow: 0 0 0 10px rgba(255, 153, 51, 0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+/* Progress ring */
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-ring-circle {
+  transition: stroke-dashoffset 0.5s ease-out;
+}
