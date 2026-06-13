@@ -1,73 +1,110 @@
-# React + TypeScript + Vite
+# Mission Control 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Mission Control is a personal productivity and life management dashboard built with React, TypeScript, Vite, Supabase, and Clerk Authentication.
 
-Currently, two official plugins are available:
+The goal of this project is to provide a single platform for tracking:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* 🎯 Goals
+* ✅ Tasks
+* 📚 Study Sessions
+* 🏋️ Daily Routine
+* 🔥 Habits & Streaks
+* 📝 Journal Entries
+* 📅 Calendar Events
+* 📊 Analytics & Progress Tracking
+* 🛡️ Cybersecurity Learning
+* 💼 Career Development
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+### Dashboard
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* Real-time clock
+* Productivity score
+* Daily progress overview
+* Study hour tracking
+* Task completion tracking
+* Streak monitoring
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Goal Management
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* Create long-term goals
+* Track completion percentage
+* Monitor hours invested
+* Set deadlines and milestones
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Task Management
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+* Priority-based task system
+* Categories for study, fitness, career, and personal growth
+* Deadline tracking
+* Completion monitoring
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Study Tracking
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* Session timer
+* Category-wise study logging
+* Duration analytics
+* Progress reports
+
+### Habit Tracking
+
+* Daily habit monitoring
+* Streak calculation
+* Consistency tracking
+
+### Calendar & Planning
+
+* Event creation
+* Monthly planner
+* Deadline visualization
+
+### Journal
+
+* Daily reflections
+* Accomplishments
+* Learnings
+* Tomorrow's priorities
+
+### Authentication
+
+* Clerk Authentication
+* Protected routes
+* Private dashboard access
+
+---
+
+## Tech Stack
+
+### Frontend
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* Zustand
+* React Router
+
+### Backend
+
+* Supabase Database
+
+### Authentication
+
+* Clerk
+
+### Deployment
+
+* Vercel
+
+## Author
+
+**Samyak Mishra**
+
+Final Year Computer Science Engineering Student
+
+Mission Statement:
+
+> Every Hour Accounted For.
