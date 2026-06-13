@@ -1,5 +1,3 @@
-import React from "react";
-
 const Profile = () => {
   return (
     <div className="space-y-6 p-6">
